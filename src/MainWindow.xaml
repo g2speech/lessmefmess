@@ -1,0 +1,23 @@
+﻿<Window x:Class="LessMefMess.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Less MEF Mess"
+        MaxWidth="800"
+        SizeToContent="WidthAndHeight">
+    <DockPanel>
+        <Button Click="OnGenerate"
+                Content="Generate and open graph in yEd"
+                DockPanel.Dock="Bottom"
+                IsDefault="True" />
+        <TextBlock Margin="8" DockPanel.Dock="Top">Paste a big CompositionException here and press that button to visualize the dependencies</TextBlock>
+        <TextBox x:Name="ExceptionTrace"
+                 AcceptsReturn="True"
+                 AcceptsTab="True"
+                 HorizontalScrollBarVisibility="Visible"
+                 MaxLines="30"
+                 MinLines="8"
+                 TextWrapping="NoWrap"
+                 VerticalScrollBarVisibility="Visible"
+                 x:FieldModifier="private" />
+    </DockPanel>
+</Window>
